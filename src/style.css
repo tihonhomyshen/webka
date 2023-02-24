@@ -1,54 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 }
 
-.container{
+body{
+  font-family: "IBM Plex Mono";
+  color: #9C9C9C;
+  font-weight: 400;
+  background: #080808;
+  font-size: 14px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 95px;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.header_container {
+  background: #1B1B1B;
+  padding-top: 24px;
+  padding-bottom: 28px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: space-between;
 }
 
-.wrapper{
-  background: rgb(241, 244, 245);
-  width: 280px;
-  padding: 25px 40px 30px 20px;
-  border-radius: 15px;
+.menu li{
+  list-style-type: none;
+  margin-right: 70px;
+}
+
+.menu li:last-child{
+  margin-right: 0px;
+}
+
+.menu ul{
   display: flex;
-  flex-direction: column;
-  position: relative;
 }
 
-.bottom-button{
-  border: 0;
-  padding: 10px;
-  margin-top: 30px;
-  border-radius: 15px;
-  color: aqua;
-  background-color: blue;
-  width: 150px;
-  align-self: center;
+.icons img{
+  margin-right: 25px;
 }
 
-.title{
-   color: blue;
-   font-size: 25px;
-   margin-bottom: 25px;
+.icons img:last-child{
+  margin-right: 0;
 }
 
-.close{
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  border: 0;
-  background: rgb(50, 136, 216);
+.portfolio{
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.portfolio_column{
+  width: 492px;
+  margin-right: 70px;
+}
+
+.name{
+  font-size: 44px;
+  font-weight: 800;
+  font-family: "Raleway";
+  color: #FFF;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.name:hover{
+  color: greenyellow;
+	box-shadow: inset 0 0 0 0px greenyellow;
+}
+
+.text{
+  margin-bottom: 30px;
+  line-height: 1.71;
+  letter-spacing: 0.01em;
+}
+
+.button{
+  padding: 21px 64px;
+  background: #3F8E00;
+  border: 1px solid #62BA1B;
+  box-shadow: 0px 8px 30px rgba(63, 142, 0, 0.5);
+  border-radius: 4px;
+  color: #FFF;
+  font-family: "IBM Plex Mono";
   font-weight: 700;
-  color: white;
-  width: 25px;
-  height: 25px;
+  font-size: 16px;
+}
+
+
+.button:hover{
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+.photo > img{
   border-radius: 50%;
 }
 
+.portfolio .container {
+  display: flex;
+}
+
+.footer_title{
+  color: #FFF;
+  margin-bottom: 20px;
+}
+
+.companies{
+  display: flex;
+  justify-content: space-between;
+}
+
+.companies img{
+  border: 1px solid #1B1B1B;
+  border-radius: 6px;
+  padding: 13px 36px;
+}
