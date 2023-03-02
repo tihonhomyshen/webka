@@ -6,12 +6,21 @@
   box-sizing: border-box;
 }
 
+:root{
+  --color: #080808;
+  --orange: #FFA217;
+  --blue: #000AFF;
+  --green: #2AB090;
+}
 body{
   font-family: "IBM Plex Mono";
   color: #9C9C9C;
   font-weight: 400;
-  background: #080808;
   font-size: 14px;
+}
+
+.header{
+  background: var(--color);
 }
 
 .container {
@@ -53,6 +62,11 @@ body{
 .portfolio{
   padding-top: 80px;
   padding-bottom: 60px;
+  background: var(--color);
+}
+
+.profile_wrapper{
+  display: flex;
 }
 
 .portfolio_column{
@@ -120,6 +134,7 @@ body{
 
 .portfolio .container {
   display: flex;
+  flex-direction: column;
 }
 
 .footer_title{
@@ -130,6 +145,8 @@ body{
 .companies{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .companies img{
@@ -137,3 +154,212 @@ body{
   border-radius: 6px;
   padding: 13px 36px;
 }
+
+.case_studies{
+  padding: 80px 0;
+}
+
+.case_studies .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards_wrapper{
+  margin-top: 60px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reverse{
+  flex-direction: row-reverse;
+}
+
+.reverse .card-text{
+  padding-left: 25px;
+}
+
+.case_studies .title{
+  color: var(--color);
+  font-weight: 800;
+  font-size: 34px;
+  font-family: "Raleway"; 
+}
+
+.title_page > p {
+  margin-top: 10px;
+}
+
+.case_studies .title_page{
+  text-align: center;
+  max-width: 570px;
+}
+
+.before_title{
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 60px;
+  padding: 0 10px;
+}
+
+.before_title_orange{
+  color: var(--orange);
+  background: #FFF6E9;
+}
+
+.before_title_blue{
+  color: var(--blue);
+  background: #D0E6FF;
+}
+
+.before_title_green{
+  color: var(--green);
+  background: #E0FFF8;
+}
+
+.card-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400px;
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-text h3{
+  color: var(--color);
+  font-weight: 800;
+  font-size: 24px;
+  font-family: "Raleway";
+  margin-top: 20px;
+}
+
+.card-text > p{
+  margin-top: 10px;
+}
+
+
+.card_button{
+  color: #FFF;
+  box-shadow: 0px 8px 30px rgba(42, 176, 144, 0.1);
+  border-radius: 4px;
+  border: none;
+  font-weight: 700;
+  margin-top: 50px;
+  padding: 10px 25px;
+}
+
+.card_button_orange{
+  background: var(--orange);
+}
+
+.card_button_blue{
+  background: var(--blue);
+}
+
+.card_button_green{
+  background: var(--green);
+}
+
+.case_studies .card + .card{
+  margin-top: 80px;
+}
+
+.card_image {
+  border-radius: 6px;
+}
+
+@media screen and (max-width:1100px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width:900px) {
+   .menu li{
+    margin-right: 40px;
+    text-align: center;
+   }
+   
+   .companies{
+    justify-content: center;
+   }
+
+   .card_image {
+    width: 400px;
+    object-fit: contain;
+   }
+   .card-text{
+    padding-top: 10px;
+   }
+}
+
+@media screen and (max-width:810px)  {
+  .portfolio_column .button{
+    padding: 21px 45px;
+  }
+
+  .portfolio_column{
+    margin-right: 15px;
+  }
+
+  .card_image{
+    width: 350px;
+  }
+  
+  .card_button{
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width:760px) {
+  .menu li{
+    margin-right: 20px;
+  }
+  
+  .photo img{
+    width: 300px;
+  }
+
+  .profile_wrapper{
+    margin-bottom: 10px;
+  }
+
+} 
+
+@media screen and (max-width:710px) {
+  .menu li{
+    margin-right: 10px;
+  }
+  
+  .photo img{
+    width: 250px;
+  }
+
+  .profile_wrapper {
+    align-items: center;
+  }
+
+  .card_image{
+    width: 325px;
+  }
+
+  .card-text h3{
+    margin-top:10px;
+  }
+
+  .card_button {
+    margin-top: 10px;
+  }  
+  
+  .portfolio_column .button{
+    padding: 15px 20px;
+  }
+}
+
