@@ -45,6 +45,11 @@ body {
   margin-right: 70px;
 }
 
+.menu a{
+  text-decoration: none;
+  color: #9C9C9C;
+}
+
 .menu li:last-child {
   margin-right: 0px;
 }
