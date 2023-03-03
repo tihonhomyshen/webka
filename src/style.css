@@ -1,25 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --color: #080808;
   --orange: #FFA217;
   --blue: #000AFF;
   --green: #2AB090;
 }
-body{
+
+body {
   font-family: "IBM Plex Mono";
   color: #9C9C9C;
   font-weight: 400;
   font-size: 14px;
 }
 
-.header{
+.header {
   background: var(--color);
 }
 
@@ -38,43 +40,43 @@ body{
   justify-content: space-between;
 }
 
-.menu li{
+.menu li {
   list-style-type: none;
   margin-right: 70px;
 }
 
-.menu li:last-child{
+.menu li:last-child {
   margin-right: 0px;
 }
 
-.menu ul{
+.menu ul {
   display: flex;
 }
 
-.icons img{
+.icons img {
   margin-right: 25px;
 }
 
-.icons img:last-child{
+.icons img:last-child {
   margin-right: 0;
 }
 
-.portfolio{
+.portfolio {
   padding-top: 80px;
   padding-bottom: 60px;
   background: var(--color);
 }
 
-.profile_wrapper{
+.profile_wrapper {
   display: flex;
 }
 
-.portfolio_column{
-  width: 492px;
+.portfolio_column {
+  max-width: 492px;
   margin-right: 70px;
 }
 
-.name{
+.name {
   font-size: 44px;
   font-weight: 800;
   font-family: "Raleway";
@@ -83,18 +85,18 @@ body{
   margin-bottom: 20px;
 }
 
-.name:hover{
+.name:hover {
   color: greenyellow;
-	box-shadow: inset 0 0 0 0px greenyellow;
+  box-shadow: inset 0 0 0 0px greenyellow;
 }
 
-.text{
+.text {
   margin-bottom: 30px;
   line-height: 1.71;
   letter-spacing: 0.01em;
 }
 
-.button{
+.button {
   padding: 21px 64px;
   background: #3F8E00;
   border: 1px solid #62BA1B;
@@ -107,28 +109,32 @@ body{
 }
 
 
-.button:hover{
+.button:hover {
   animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
-	0%, 20%, 60%, 100% {
-		transform: translateY(0);
-		transform: translateY(0);
-	}
 
-	40% {
-		transform: translateY(-20px);
-		transform: translateY(-20px);
-	}
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
 
-	80% {
-		transform: translateY(-10px);
-		transform: translateY(-10px);
-	}
+  40% {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 }
 
-.photo > img{
+.photo>img {
   border-radius: 50%;
 }
 
@@ -137,35 +143,35 @@ body{
   flex-direction: column;
 }
 
-.footer_title{
+.footer_title {
   color: #FFF;
   margin-bottom: 20px;
 }
 
-.companies{
+.companies {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.companies img{
+.companies img {
   border: 1px solid #1B1B1B;
   border-radius: 6px;
   padding: 13px 36px;
 }
 
-.case_studies{
+.case_studies {
   padding: 80px 0;
 }
 
-.case_studies .container{
+.case_studies .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.cards_wrapper{
+.cards_wrapper {
   margin-top: 60px;
   width: 100%;
 }
@@ -175,53 +181,53 @@ body{
   justify-content: space-between;
 }
 
-.reverse{
+.reverse {
   flex-direction: row-reverse;
 }
 
-.reverse .card-text{
+.reverse .card-text {
   padding-left: 25px;
 }
 
-.case_studies .title{
+.case_studies .title {
   color: var(--color);
   font-weight: 800;
   font-size: 34px;
-  font-family: "Raleway"; 
+  font-family: "Raleway";
 }
 
-.title_page > p {
+.title_page>p {
   margin-top: 10px;
 }
 
-.case_studies .title_page{
+.case_studies .title_page {
   text-align: center;
   max-width: 570px;
 }
 
-.before_title{
+.before_title {
   font-weight: 700;
   font-size: 12px;
   border-radius: 60px;
   padding: 0 10px;
 }
 
-.before_title_orange{
+.before_title_orange {
   color: var(--orange);
   background: #FFF6E9;
 }
 
-.before_title_blue{
+.before_title_blue {
   color: var(--blue);
   background: #D0E6FF;
 }
 
-.before_title_green{
+.before_title_green {
   color: var(--green);
   background: #E0FFF8;
 }
 
-.card-text{
+.card-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -231,7 +237,7 @@ body{
   padding-right: 10px;
 }
 
-.card-text h3{
+.card-text h3 {
   color: var(--color);
   font-weight: 800;
   font-size: 24px;
@@ -239,12 +245,12 @@ body{
   margin-top: 20px;
 }
 
-.card-text > p{
+.card-text>p {
   margin-top: 10px;
 }
 
 
-.card_button{
+.card_button {
   color: #FFF;
   box-shadow: 0px 8px 30px rgba(42, 176, 144, 0.1);
   border-radius: 4px;
@@ -254,19 +260,19 @@ body{
   padding: 10px 25px;
 }
 
-.card_button_orange{
+.card_button_orange {
   background: var(--orange);
 }
 
-.card_button_blue{
+.card_button_blue {
   background: var(--blue);
 }
 
-.card_button_green{
+.card_button_green {
   background: var(--green);
 }
 
-.case_studies .card + .card{
+.case_studies .card+.card {
   margin-top: 80px;
 }
 
@@ -282,63 +288,64 @@ body{
 }
 
 @media screen and (max-width:900px) {
-   .menu li{
+  .menu li {
     margin-right: 40px;
     text-align: center;
-   }
-   
-   .companies{
-    justify-content: center;
-   }
+  }
 
-   .card_image {
+  .companies {
+    justify-content: center;
+  }
+
+  .card_image {
     width: 400px;
     object-fit: contain;
-   }
-   .card-text{
+  }
+
+  .card-text {
     padding-top: 10px;
-   }
+  }
 }
 
-@media screen and (max-width:810px)  {
-  .portfolio_column .button{
+@media screen and (max-width:810px) {
+  .portfolio_column .button {
     padding: 21px 45px;
   }
 
-  .portfolio_column{
+  .portfolio_column {
     margin-right: 15px;
   }
 
-  .card_image{
+  .card_image {
     width: 350px;
   }
-  
-  .card_button{
+
+  .card_button {
     margin-top: 20px;
   }
 }
 
 @media screen and (max-width:760px) {
-  .menu li{
+  .menu li {
     margin-right: 20px;
   }
-  
-  .photo img{
+
+  .photo img {
     width: 300px;
   }
 
-  .profile_wrapper{
+  .profile_wrapper {
     margin-bottom: 10px;
   }
 
-} 
+}
 
 @media screen and (max-width:710px) {
-  .menu li{
+  .menu li {
     margin-right: 10px;
   }
-  
-  .photo img{
+
+  .photo img {
     width: 250px;
   }
 
@@ -346,20 +353,82 @@ body{
     align-items: center;
   }
 
-  .card_image{
+  .card_image {
     width: 325px;
   }
 
-  .card-text h3{
-    margin-top:10px;
+  .card-text h3 {
+    margin-top: 10px;
   }
 
   .card_button {
     margin-top: 10px;
-  }  
-  
-  .portfolio_column .button{
+  }
+
+  .portfolio_column .button {
     padding: 15px 20px;
   }
 }
 
+@media screen and (max-width:640px) {
+  .cards_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .card-text{
+    padding-left: 30px;
+  }
+  
+  .profile_wrapper{
+    flex-direction: column-reverse;
+  }
+
+  .header_container{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px 10px;
+  }
+  
+  .footer_title{
+    text-align: center;
+  }
+
+  .text{
+    margin-bottom: 10px;
+  }
+
+  .portfolio_column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .card_image{
+    width: 270px;
+  }
+
+  .card-text{
+    max-width: 320px;
+  }
+
+  .menu li{
+    font-size: 12px;
+  }
+
+  .portfolio_column{
+    margin: 0;
+  }
+
+  .name{
+    font-size: 30px;
+  }
+} 
