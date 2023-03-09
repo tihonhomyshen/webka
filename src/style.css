@@ -448,7 +448,8 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   margin-top: 60px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
 }
 
 .reviews .title_page {
@@ -471,16 +472,51 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .review_block{
+  position: relative;
+  display: flex;
+  flex-direction: column;
   max-width: 445px;
   border-radius: 6px;
-  border: 1px solid white;
+}
+
+.review_block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  padding: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(72, 72, 72, 1) 0%,
+    rgba(27, 27, 27, 1) 100%
+  );
+  pointer-events: none;
+  /* Необходимо, чтобы связать border-radius и border-image */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .review_text{
   margin: 30px 30px;
+  font-weight: 600;
+}
+
+.review_author{
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.review_author img{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 30px;
 }
 
 .review_author p{
@@ -488,3 +524,4 @@ body {
   font-weight: 700;
   font-size: 18px;
 }
+
