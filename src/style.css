@@ -29,7 +29,6 @@ body {
   margin: 0 auto;
   max-width: 1100px;
   padding: 0 95px;
-  border-radius: 0px 0px 8px 8px;
 }
 
 .header_container {
@@ -38,6 +37,7 @@ body {
   padding-bottom: 28px;
   display: flex;
   justify-content: space-between;
+  border-radius: 0px 0px 8px 8px;
 }
 
 .menu li {
@@ -405,6 +405,12 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
+  .work_table {
+    justify-content: center;
+    text-align: center;
+  }
+
 }
 
 @media screen and (max-width:400px) {
@@ -427,6 +433,11 @@ body {
   .name{
     font-size: 30px;
   }
+
+  .work_table img{
+    width: 250px;
+  }
+
 } 
 
 .reviews{
@@ -495,7 +506,6 @@ body {
     rgba(27, 27, 27, 1) 100%
   );
   pointer-events: none;
-  /* Необходимо, чтобы связать border-radius и border-image */
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -537,11 +547,18 @@ body {
 
 .work_examples{
   display: flex;
-  
+  flex-wrap: wrap;
   margin-top: 60px;
+  justify-content: center;
+  gap: 15px;
+}
+
+.work_table{
+  max-width: 430px;
 }
 
 .work_table img{
+  width: 90%;
   border-radius: 6px;
 }
 
@@ -558,7 +575,7 @@ body {
 }
 
 .info_button{
-  font-family: "IMB Plex Mono";
+  font-family: "IBM Plex Mono";
   padding: 10px 24px;
   color: #FFF;
   background: #3F8E00;
@@ -569,3 +586,62 @@ body {
   font-size: 14px;
 }
 
+.get-in-touch{
+  background-color: var(--color);
+  padding-top: 80px;
+}
+
+.get-in-touch h2{
+  color:#FFF;
+}
+
+.get-in-touch .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form{
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form > p{
+  color: #FFF;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+input{
+  padding: 2px 12px;
+  border: 1px solid #D8D8D8;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: "IBM Plex Mono";
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.submit-button{
+  padding: 16px 117px;
+  background: #3F8E00;
+  color:#FFF;
+  font-family: "IBM Plex Mono";
+  font-weight: 700;
+  white-space: nowrap;
+  margin-bottom: 80px;
+}
+
+textarea{
+  margin-bottom: 20px;
+}
+
+.end{
+  background:#1B1B1B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
